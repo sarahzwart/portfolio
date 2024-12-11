@@ -1,9 +1,23 @@
 import './About.css'
-import { Card } from "@/components/ui/card"; // Shadcn Card component
+import { Card } from "@/components/ui/card"; 
+import { motion } from "framer-motion";
 
 export const About = () => {
   return (
-    <div className="py-12 bg-gray-50">
+    <motion.div
+      className="py-12 bg-gradient-to-r from-pink-200 via-orange-200 via-yellow-200 via-teal-200 to-indigo-200"
+      animate={{
+        backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"], // Animation pattern
+      }}
+      transition={{
+        duration: 8, // Duration for the transition
+        repeat: Infinity, // Makes the animation repeat indefinitely
+        ease: "linear", // Smooth linear easing
+      }}
+      style={{
+        backgroundSize: "200% 200%", // To make the gradient large enough for the animation
+      }}
+    >
       <div className="container mx-auto px-6 md:px-12">
         <Card className="p-8 bg-white shadow-lg rounded-lg">
           <h1 className="text-3xl font-bold text-purple-600">About Me</h1>
@@ -42,6 +56,6 @@ export const About = () => {
           </code>
         </Card>
       </div>
-    </div>
+    </motion.div>
   );
 };
