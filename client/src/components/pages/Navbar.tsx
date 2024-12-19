@@ -1,18 +1,28 @@
 import { Button } from "@/components/ui/button";
+import SZLogo from "../../assets/sz.png";
 
 export const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between p-6 bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg">
-      <h1 className="text-2xl font-bold text-white">Sarah Zwart</h1>
-      <div className="space-x-4">
+    <nav className="flex items-center justify-between px-4 py-2">
+      {/* Left: Logo */}
+      <div className="flex-shrink-0">
+        <img src={SZLogo} className="w-auto inline-block h-20" alt="Logo" />
+      </div>
+
+      {/* Middle: About and Projects */}
+      <div className="flex space-x-4">
         <Button variant="ghost" asChild>
-          <a href="#about" className="text-white hover:text-gray-200">About</a>
+          <a href="#about" className="text-[#545454] hover:text-[#ffbee6] h-12 hover:bg-[#545454]">About</a>
         </Button>
         <Button variant="ghost" asChild>
-          <a href="#projects" className="text-white hover:text-gray-200">Projects</a>
+          <a href="#projects" className="text-[#545454] hover:text-[#ffbee6] h-12 hover:bg-[#545454]">Projects</a>
         </Button>
+      </div>
+
+      {/* Right: Contact */}
+      <div className="flex-shrink-0">
         <Button variant="ghost" asChild>
-          <a href="#contact" className="text-white hover:text-gray-200">Contact</a>
+          <a href="#contact" className="text-[#545454] hover:text-[#ffbee6] h-12 hover:bg-[#545454]">Contact</a>
         </Button>
       </div>
     </nav>

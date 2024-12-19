@@ -5,13 +5,13 @@ export const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-12 bg-gray-50">
+    <section id="projects" className="py-12">
       <div className="container mx-auto px-6 md:px-12">
-        <h2 className="text-4xl font-bold text-center text-purple-600">Projects</h2>
+        <h2 className="text-4xl font-bold text-center text-gray-600">Projects</h2>
         <div className="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2">
           {projects.map((project, index) => (
             <div key={index} className="p-6 bg-white shadow-lg rounded-lg transition duration-300 hover:shadow-xl">
-              <h3 className="text-2xl font-semibold text-purple-600">{project.name}</h3>
+              <h3 className="text-2xl font-semibold text-gray-600">{project.name}</h3>
               <p className="mt-2 text-gray-600">{project.description}</p>
               <link></link>
             </div>
