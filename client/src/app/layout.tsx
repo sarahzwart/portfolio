@@ -28,6 +28,7 @@ export default function RootLayout({
       <head>
         <title>Sarah Zwart's Website</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="images/favicon.ico" />  
       </head>
       <body className={poppins.className}> 
         {children}
