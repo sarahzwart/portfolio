@@ -1,7 +1,7 @@
 [build]
-  base = "client"  # Build from the `client` folder
-  command = "npm run build && npm run export"
-  publish = "client/out"  # Publish the `out` folder
+  base = "client"  
+  command = "npm run build"
+  publish = "out"
 
 [[redirects]]
   from = "/*"
