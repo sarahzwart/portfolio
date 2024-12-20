@@ -63,7 +63,7 @@ export function Projects() {
             <CarouselContent>
               {projects.map((project, index) => (
                 <CarouselItem key={index} className="flex justify-center">
-                  <Card className="flex flex-col items-center justify-center p-8 bg-white shadow-lg rounded-lg transition duration-300 hover:shadow-xl max-w-[60vw]">
+                  <Card className="flex flex-col items-center justify-center p-8 bg-white shadow-lg rounded-lg transition duration-300 hover:shadow-xl w-full sm:w-[80vw] md:w-[60vw] lg:w-[50vw]">
                     <CardContent className="flex flex-col items-center justify-center">
                       <h3 className="text-xl sm:text-2xl font-semibold text-[#675D50] text-center">
                         {project.name}
