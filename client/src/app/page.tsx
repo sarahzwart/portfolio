@@ -5,7 +5,9 @@ import { Projects } from "./pages/Projects";
 import { Contact } from "./pages/Contact";
 import { Footer } from "./pages/Footer";
 import { motion, Variants } from "framer-motion";
-import React from 'react'
+import Headshot from "../assets/headshot.jpg";
+import Image from "next/image";
+import React from "react";
 
 const fadeInVariants: Variants = {
   offscreen: {
@@ -37,15 +39,24 @@ function Home() {
         <main>
           <motion.section
             id="hello"
-            className="flex py-12 bg-[#f4f4f4] w-full h-[100vh] items-center justify-start"
+            className="flex bg-[#f4f4f4] w-full h-[100vh] items-center justify-center"
             variants={fadeInVariants}
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ amount: 0.8 }}
           >
-            <div className="px-6 text-8xl mt-4 font-bold text-[#ffacdf]">
-              <h1>Hello.</h1>
-              <h1>I'm Sarah</h1>
+            <div className="flex items-center justify-between w-full pl-4 lg:justify-center">
+              <div className="text-8xl font-bold text-[#ffacdf] flex flex-col items-start lg:pr-12">
+                <h1>Hello.</h1>
+                <h1>I'm Sarah</h1>
+              </div>
+              <div className="flex-shrink-0 ml-auto lg:ml-0">
+                <Image
+                  src={Headshot}
+                  alt="Sarah Zwart's Headshot"
+                  className="w-[25vh] sm:w-[40vh] md:w-[50vh] lg:w-[50vh] pr-4 xl:w-[50vh] 2xl:w-[50vh]  rounded-full object-cover transform transition-transform duration-300 ease-in-out"
+                />
+              </div>
             </div>
           </motion.section>
 
@@ -66,7 +77,7 @@ function Home() {
             variants={fadeInVariants}
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.5 }}
           >
             <Projects />
           </motion.section>
@@ -88,4 +99,4 @@ function Home() {
   );
 }
 
-export default Home;  
+export default Home;

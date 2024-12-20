@@ -4,9 +4,9 @@ import SZLogo from "../../assets/pinksz.png";
 
 export const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between px-6 py-3 bg-[#f4f4f4] shadow-sm">
+    <nav className="flex items-center justify-between px-6 pt-3 bg-[#f4f4f4] shadow-sm">
       <div className="flex-shrink-0">
-        <Image src={SZLogo} className="w-auto inline-block h-12" alt="Logo" />
+        <Image src={SZLogo} className="w-auto inline-block h-16" alt="Logo" />
       </div>
       <div className="flex space-x-6">
         <Button
