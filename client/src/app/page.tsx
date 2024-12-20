@@ -48,7 +48,7 @@ function Home() {
             <div className="flex items-center justify-between w-full pl-4 lg:justify-center">
               <div className="text-8xl font-bold text-[#ffacdf] flex flex-col items-start lg:pr-12">
                 <h1>Hello.</h1>
-                <h1>I'm Sarah</h1>
+                <h1>I&apos;m Sarah</h1>
               </div>
               <div className="flex-shrink-0 ml-auto lg:ml-0">
                 <Image

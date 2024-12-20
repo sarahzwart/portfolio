@@ -8,7 +8,7 @@ export const About = () => {
           <div className="flex flex-col items-center justify-center text-center">
             <h1 className="text-3xl font-bold text-[#ffacdf]">About Me</h1>
             <p className="mt-4 text-gray-700">
-              Hi! Welcome to my portfolio website. I'm Sarah Zwart, a senior studying Computer Science at Lehigh University. 
+              Hi! Welcome to my portfolio website. I&apos;m Sarah Zwart, a senior studying Computer Science at Lehigh University. 
               I recently completed a year-long capstone project focused on developing an accessibility-based facility rating app, where I 
               utilized React Native and TypeScript. 
             </p>

@@ -5,7 +5,7 @@ export const Contact = () => {
     <section id="contact" className="pt-12 h-[100vh] flex items-center justify-center bg-[#f4f4f4]">
       <div className="container mx-auto px-6 md:px-12 text-center">
         <h2 className="text-4xl font-bold text-[#f759ba]">Contact Me</h2>
-        <p className="mt-4 text-[#545454]">I'd love to connect!</p>
+        <p className="mt-4 text-[#545454]">I&apos;d love to connect!</p>
         <div className="flex justify-center space-x-6 mt-6">
           <a
             href="mailto:sarahczwart@gmail.com"
