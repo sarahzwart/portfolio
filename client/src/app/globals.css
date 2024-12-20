@@ -16,3 +16,9 @@ html, body {
 #__next {
   flex: 1; /* Ensure the Next.js app takes up the full screen */
 }
+
+@media (max-width: 768px) {
+  #hello {
+    margin-top: calc(100vh - 3rem); 
+  }
+}

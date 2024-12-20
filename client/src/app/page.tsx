@@ -57,7 +57,6 @@ function Home() {
             viewport={{ amount: 0.5 }}
           >
             <div className="flex flex-wrap items-center justify-center gap-[12vw] w-full px-4">
-              {/* Text Section */}
               <div className="text-[6vw] font-bold text-[#675D50] flex flex-col items-start max-w-[45%]">
                 <h1 className="leading-tight">Hello.</h1>
                 <h1 className="leading-tight">I&apos;m Sarah</h1>
