@@ -49,6 +49,7 @@ function Home() {
         <Navbar />
         <main>
           <motion.section
+            id="hello"
             className="flex bg-[#cee2ce] w-full h-[100vh] items-center justify-center overflow-hidden"
             variants={fadeInVariants}
             initial="offscreen"
@@ -74,7 +75,8 @@ function Home() {
           </motion.section>
 
           <motion.section
-            className="pb-12"
+            id="about"
+            className=""
             variants={fadeInVariants}
             initial="offscreen"
             whileInView="onscreen"
@@ -84,7 +86,8 @@ function Home() {
           </motion.section>
 
           <motion.section
-            className="py-12"
+            id="projects"
+            className=""
             variants={fadeInVariants}
             initial="offscreen"
             whileInView="onscreen"
@@ -94,6 +97,7 @@ function Home() {
           </motion.section>
 
           <motion.section
+            id="contact"
             className=""
             variants={fadeInVariants}
             initial="offscreen"

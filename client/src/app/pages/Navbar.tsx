@@ -3,23 +3,30 @@ import Image from "next/image";
 import SZLogo from "../../assets/szbrown.png";
 
 export const Navbar = () => {
+  const scrollToSection = (section: string) => {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav className="flex items-center justify-between px-6 pt-3 bg-[#cee2ce] shadow-sm">
       <div className="flex-shrink-0">
         <Image src={SZLogo} className="w-auto inline-block h-16" alt="Logo" />
       </div>
-      <div className="flex space-x-6">
+      <div className="flex ">
         <Button
           variant="ghost"
           className="font-bold text-[#675D50] hover:text-[#4a433a] h-10"
-          onClick={() => window.location.hash = "#about"}
+          onClick={() => scrollToSection("about")}
         >
           ABOUT
         </Button>
         <Button
           variant="ghost"
           className="font-bold text-[#675D50] hover:text-[#4a433a] h-10"
-          onClick={() => window.location.hash = "#projects"}
+          onClick={() => scrollToSection("projects")}
         >
           PROJECTS
         </Button>
@@ -28,7 +35,7 @@ export const Navbar = () => {
         <Button
           variant="ghost"
           className="font-bold text-[#675D50] hover:text-[#4a433a] h-10"
-          onClick={() => window.location.hash = "#contact"}
+          onClick={() => scrollToSection("contact")}
         >
           CONTACT
         </Button>
