@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   output: 'export',
   reactStrictMode: true,
   images: {
-    domains: ['your-domain.com'], // Add allowed image domains
+    domains: ['https://astonishing-beijinho-34d194.netlify.app/'], // Add allowed image domains
   },
   eslint: {
     ignoreDuringBuilds: true,
