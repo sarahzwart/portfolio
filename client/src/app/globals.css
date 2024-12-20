@@ -19,6 +19,6 @@ html, body {
 
 @media (max-width: 768px) {
   #hello {
-    margin-top: calc(-3rem); 
+    height:80vh
   }
 }
