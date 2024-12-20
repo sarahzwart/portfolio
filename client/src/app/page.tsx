@@ -87,7 +87,7 @@ function Home() {
             variants={fadeInVariants}
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ amount: 0.5 }}
+            viewport={{ amount: 0.7 }}
           >
             <Projects />
           </motion.section>
@@ -98,7 +98,7 @@ function Home() {
             variants={fadeInVariants}
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.7 }}
           >
             <Contact />
           </motion.section>
