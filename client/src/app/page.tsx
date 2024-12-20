@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 import { Navbar } from "./pages/Navbar";
 import { About } from "./pages/About";
 import { Projects } from "./pages/Projects";
@@ -7,7 +8,6 @@ import { Footer } from "./pages/Footer";
 import { motion, Variants } from "framer-motion";
 import Headshot from "../assets/headshot.jpg";
 import Image from "next/image";
-import React, { useEffect } from "react";
 
 const fadeInVariants: Variants = {
   offscreen: {
@@ -28,11 +28,15 @@ const fadeInVariants: Variants = {
 
 function Home() {
   useEffect(() => {
-    const helloSection = document.getElementById("hello");
-    if (helloSection) {
-      helloSection.scrollIntoView({ behavior: "smooth" });
-    }
-  }, []);
+    const scrollToTop = () => {
+      window.scrollTo(0, 0);
+    };
+    scrollToTop();
+    window.addEventListener('load', scrollToTop);
+    return () => {
+      window.removeEventListener('load', scrollToTop);
+    };
+  }, []); 
 
   return (
     <motion.div
@@ -45,12 +49,11 @@ function Home() {
         <Navbar />
         <main>
           <motion.section
-            id="hello"
             className="flex bg-[#cee2ce] w-full h-[100vh] items-center justify-center overflow-hidden"
             variants={fadeInVariants}
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ amount: 0.6 }}
+            viewport={{ amount: 0.5 }}
           >
             <div className="flex flex-wrap items-center justify-center gap-[12vw] w-full px-4">
               {/* Text Section */}
@@ -71,34 +74,31 @@ function Home() {
           </motion.section>
 
           <motion.section
-            id="about"
-            className="py-12"
+            className="pb-12"
             variants={fadeInVariants}
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ amount: 0.6 }}
+            viewport={{ amount: 0.5 }}
           >
             <About />
           </motion.section>
 
           <motion.section
-            id="projects"
             className="py-12"
             variants={fadeInVariants}
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ amount: 0.6 }}
+            viewport={{ amount: 0.5 }}
           >
             <Projects />
           </motion.section>
 
           <motion.section
-            id="contact"
             className=""
             variants={fadeInVariants}
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ amount: 0.6 }}
+            viewport={{ amount: 0.5 }}
           >
             <Contact />
           </motion.section>
