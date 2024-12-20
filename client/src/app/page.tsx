@@ -36,7 +36,7 @@ function Home() {
 
   return (
     <motion.div
-      className="bg-gradient-to-r from-[#ffbee6] to-white flex-wrap"
+      className="bg-gradient-to-r from-[#ede0cb] to-[#ede0cb] flex-wrap"
       style={{
         backgroundSize: "200% 200%",
       }}
@@ -46,7 +46,7 @@ function Home() {
         <main>
           <motion.section
             id="hello"
-            className="flex bg-[#f4f4f4] w-full h-[100vh] items-center justify-center overflow-hidden"
+            className="flex bg-[#cee2ce] w-full h-[100vh] items-center justify-center overflow-hidden"
             variants={fadeInVariants}
             initial="offscreen"
             whileInView="onscreen"
@@ -54,7 +54,7 @@ function Home() {
           >
             <div className="flex flex-wrap items-center justify-center gap-[12vw] w-full px-4">
               {/* Text Section */}
-              <div className="text-[6vw] font-bold text-[#ffacdf] flex flex-col items-start max-w-[45%]">
+              <div className="text-[6vw] font-bold text-[#675D50] flex flex-col items-start max-w-[45%]">
                 <h1 className="leading-tight">Hello.</h1>
                 <h1 className="leading-tight">I&apos;m Sarah</h1>
               </div>

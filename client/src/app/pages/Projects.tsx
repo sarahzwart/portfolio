@@ -1,4 +1,30 @@
-export const Projects = () => {
+import * as React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
+
+export function Projects() {
+  const [api, setApi] = React.useState<CarouselApi>();
+  const [current, setCurrent] = React.useState(0);
+  const [count, setCount] = React.useState(0);
+
+  React.useEffect(() => {
+    if (!api) return;
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
+
   const projects = [
     {
       name: "Facility Accessibility App",
@@ -29,34 +55,45 @@ export const Projects = () => {
   return (
     <section id="projects" className="py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-600">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#675D50]">
           Projects
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center justify-center p-6 bg-white shadow-lg rounded-lg transition duration-300 hover:shadow-xl"
-            >
-              <h3 className="text-xl sm:text-2xl font-semibold text-gray-600 text-center">
-                {project.name}
-              </h3>
-              <p
-                className="mt-2 text-gray-600 text-sm sm:text-base"
-                dangerouslySetInnerHTML={{ __html: project.description }}
-              />
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-block text-[#f759ba] hover:text-[#ffacdf] transition duration-300 text-center text-sm sm:text-base"
-              >
-                View Project
-              </a>
-            </div>
-          ))}
+        <div className="relative mt-8 flex justify-center">
+          <Carousel setApi={setApi} className="w-full max-w-full">
+            <CarouselContent>
+              {projects.map((project, index) => (
+                <CarouselItem key={index} className="flex justify-center">
+                  <Card className="flex flex-col items-center justify-center p-8 bg-white shadow-lg rounded-lg transition duration-300 hover:shadow-xl max-w-[60vw]">
+                    <CardContent className="flex flex-col items-center justify-center">
+                      <h3 className="text-xl sm:text-2xl font-semibold text-[#675D50] text-center">
+                        {project.name}
+                      </h3>
+                      <p
+                        className="mt-2 text-gray-600 text-sm sm:text-base"
+                        dangerouslySetInnerHTML={{ __html: project.description }}
+                      />
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-4 inline-block text-[#675D50] hover:text-[#86827c] transition duration-300 text-center text-sm sm:text-base mx-auto"
+                      >
+                        View Project
+                      </a>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-white p-4 rounded-full shadow-lg hover:bg-gray-100 transition duration-300" />
+            <CarouselNext className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-white p-4 rounded-full shadow-lg hover:bg-gray-100 transition duration-300" />
+          </Carousel>
+        </div>
+        <div className="py-2 text-center text-sm text-muted-foreground">
+          Slide {current} of {count}
         </div>
       </div>
     </section>
   );
-};
+}
+
