@@ -50,7 +50,7 @@ function Home() {
             variants={fadeInVariants}
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ amount: 0.8 }}
+            viewport={{ amount: 0.6 }}
           >
             <div className="flex flex-wrap items-center justify-center gap-[12vw] w-full px-4">
               {/* Text Section */}
@@ -76,7 +76,7 @@ function Home() {
             variants={fadeInVariants}
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ amount: 0.7 }}
+            viewport={{ amount: 0.6 }}
           >
             <About />
           </motion.section>
@@ -87,7 +87,7 @@ function Home() {
             variants={fadeInVariants}
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ amount: 0.7 }}
+            viewport={{ amount: 0.6 }}
           >
             <Projects />
           </motion.section>
@@ -98,7 +98,7 @@ function Home() {
             variants={fadeInVariants}
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ amount: 0.7 }}
+            viewport={{ amount: 0.6 }}
           >
             <Contact />
           </motion.section>
