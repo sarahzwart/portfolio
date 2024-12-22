@@ -24,7 +24,7 @@ export const Contact = () => {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/sarahzwart/"
+            href="https://www.linkedin.com/in/sarah-zwart"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block p-3 bg-[#0077b5] text-white rounded-full hover:bg-[#675D50] transition duration-300"
