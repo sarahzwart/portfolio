@@ -45,11 +45,18 @@ export function Projects() {
       link: "https://github.com/sarahzwart/cse241-project",
     },
     {
+      name: "Whiskr",
+      description: 
+      "<b>Technologies/Languages: </b> Typescript, MongoDB, TensorFlow, Next.js <br/> <b> Description : </b> Social Media Web App that allows only cat images to be uploaded. Leveraged AI scanning tool Tensorflow to classify image and only allow uploads that are identified as cats.",
+      link: "https://next-social-app-six.vercel.app"
+    },
+    {
       name: "Plant Pal",
       description:
         "<b>Frontend:</b> Vite + React, Javascript, Shadcn + Tailwind CSS, Axios, Google OAuth <br/> <b>Backend:</b> Express Server <br/> <b>Database:</b> ElephantSQL <br/> <b>APIs:</b> Perenual Plant API, Google OAuth API <br/> <b>About:</b> Plant Pal is an app that helps users manage their online garden by tracking when to water their plants. Users can log in via Google, add plants to their garden, and keep track of their watering status. Paid users receive personalized plant care tips to ensure their plants thrive.",
       link: "https://github.com/sarahzwart/plantpal",
     },
+   
   ];
 
   return (

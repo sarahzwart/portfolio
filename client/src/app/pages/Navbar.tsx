@@ -11,7 +11,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between px-6 pt-3 bg-[#cee2ce] shadow-sm">
+    <nav className="flex items-center justify-between px-6 pt-3 bg-[#efdce7] shadow-sm">
       <div className="flex-shrink-0">
         <Image src={SZLogo} className="w-auto inline-block h-16" alt="Logo" />
       </div>

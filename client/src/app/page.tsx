@@ -50,7 +50,7 @@ function Home() {
         <main>
           <motion.section
             id="hello"
-            className="flex bg-[#cee2ce] w-full h-[100vh] items-center justify-center overflow-hidden"
+            className="flex bg-[#efdce7] w-full h-[90vh] items-center justify-center overflow-hidden"
             variants={fadeInVariants}
             initial="offscreen"
             whileInView="onscreen"

@@ -1,6 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Montserrat } from "next/font/google";
 import { Poppins } from 'next/font/google';
 import "./globals.css";
 
@@ -26,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Sarah Zwart's Website</title>
+        <title>Sarah Zwart&apos;s Website</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="images/favicon.ico" />  
       </head>
