@@ -9,6 +9,7 @@ import { motion, Variants } from "framer-motion";
 import Headshot from "../assets/headshot.jpg";
 import Image from "next/image";
 
+
 const fadeInVariants: Variants = {
   offscreen: {
     opacity: 0,
@@ -40,9 +41,9 @@ function Home() {
 
   return (
     <motion.div
-      className="bg-gradient-to-r from-[#ede0cb] to-[#ede0cb] flex-wrap"
+      className="flex-wrap  inset-0 -z-10 bg-gradient-to-br from-[#FFF3E0] via-[#FFE0E0] to-[#F8BBD0] "
       style={{
-        backgroundSize: "200% 200%",
+        backgroundSize: "100% 100%",
       }}
     >
       <div className="scroll-smooth">
@@ -50,7 +51,10 @@ function Home() {
         <main>
           <motion.section
             id="hello"
-            className="flex bg-[#efdce7] w-full h-[90vh] items-center justify-center overflow-hidden"
+            className="flex bg-transparent w-full h-[90vh] items-center justify-center overflow-hidden"
+            style={{
+              backgroundSize: "100% 100%",
+            }}
             variants={fadeInVariants}
             initial="offscreen"
             whileInView="onscreen"

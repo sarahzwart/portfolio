@@ -45,9 +45,9 @@ export function Projects() {
       link: "https://github.com/sarahzwart/cse241-project",
     },
     {
-      name: "Whiskr",
+      name: "Whiskr😸",
       description: 
-      "<b>Technologies/Languages: </b> Typescript, MongoDB, TensorFlow, Next.js <br/> <b> Description : </b> Social Media Web App that allows only cat images to be uploaded. Leveraged AI scanning tool Tensorflow to classify image and only allow uploads that are identified as cats.",
+      "<b>Frontend: </b> Typescript, TensorFlow AI, Next.js <br/> <b>Database: </b> MongoDB <br/> <b> Description: </b> Social media cat app that only permits the upload of cat images. Leveraged machine learning tool, Tensorflow, to classify images and only allow uploads that are identified as cats. Followed a tutorial to get base design and customized colors and post functionality. </br> <b> Status: </b> In Progress ",
       link: "https://next-social-app-six.vercel.app"
     },
     {

@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Contact = () => {
   return (
-    <section id="contact" className="pt-12 h-[100vh] flex items-center justify-center bg-[#efdce7]">
+    <section id="contact" className="pt-12 h-[100vh] flex items-center justify-center bg-[#fce4dd]">
       <div className="container mx-auto px-6 md:px-12 text-center">
         <h2 className="text-4xl font-bold text-[#675D50]">Contact Me</h2>
         <p className="mt-4 text-[#545454]">I&apos;d love to connect!</p>
