@@ -6,7 +6,7 @@ import { Projects } from "./pages/Projects";
 import { Contact } from "./pages/Contact";
 import { Footer } from "./pages/Footer";
 import { motion, Variants } from "framer-motion";
-import Headshot from "../assets/headshot.jpg";
+import Headshot from "../assets/headshot1.jpg";
 import Image from "next/image";
 
 
