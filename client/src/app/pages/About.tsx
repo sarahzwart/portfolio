@@ -30,8 +30,6 @@ export const About = () => {
             <br />
             &nbsp;&nbsp;{`minor: "Data Science",`}
             <br />
-            &nbsp;&nbsp;{`certifications: Q-SYS Level 2, Crestron Intermediate System Programmer`}
-            <br />
             &nbsp;&nbsp;{`collegeCourses: ["Cybersecurity", "Capstone", "Web Development", "Databases"]`}
             <br />
             {`};`}
