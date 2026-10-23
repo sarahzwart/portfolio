@@ -3,13 +3,20 @@ import type { Config } from "tailwindcss";
 export default {
     darkMode: ["class"],
     content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
   	extend: {
   		colors: {
+  			paper: 'hsl(var(--paper))',
+  			cream: 'hsl(var(--cream))',
+  			petal: 'hsl(var(--petal))',
+  			blush: 'hsl(var(--blush))',
+  			sky: 'hsl(var(--sky))',
+  			lime: 'hsl(var(--lime))',
+  			ember: 'hsl(var(--ember))',
+  			matcha: 'hsl(var(--matcha))',
+  			cocoa: 'hsl(var(--cocoa))',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -50,6 +57,10 @@ export default {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
+  		},
+  		fontFamily: {
+  			display: ['var(--font-display)', 'sans-serif'],
+  			body: ['var(--font-body)', 'sans-serif'],
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

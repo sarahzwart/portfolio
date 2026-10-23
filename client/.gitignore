@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# private, not published
+/src/assets/Sarah_Zwart_Resume.pdf

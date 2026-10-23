@@ -2,46 +2,220 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  /*
+    Palettes. Every component uses these 8 names (plus --paper), so a theme
+    only has to redefine them. The live theme is set in src/site.config.ts.
+    Roles: cream = page background, paper = lightest surface, petal = soft
+    surface, blush = pink accent, sky = banner and footer band, lime = skills
+    ribbon, ember = buttons, matcha = logo and dark accent, cocoa = text.
+  */
+  :root,
+  [data-theme="strawberry-matcha"] {
+    --paper: 25 90% 97%;
+    --cream: 25 81% 96%;    /* page background, light tint of Tuft Bush */
+    --petal: 22 68% 84%;    /* Tuft Bush #F2CFBB */
+    --blush: 5 70% 82%;     /* Strawberry Milk #F1B4AF */
+    --sky: 70 46% 61%;      /* Avocado Cream #BBCA6F */
+    --lime: 55 64% 76%;     /* Wild Primrose #E9E29B */
+    --ember: 354 80% 74%;   /* Camaron Pink #F28892 */
+    --matcha: 65 36% 43%;   /* Matcha #8E9546 */
+    --cocoa: 70 35% 16%;    /* deep matcha for text, added for contrast */
+  }
+
+  [data-theme="beach"] {
+    --paper: 40 60% 98%;    /* #FDFBF7 */
+    --cream: 38 58% 96%;    /* white sand #FBF7F0 */
+    --petal: 34 47% 88%;    /* wet sand #EFE3D3 */
+    --blush: 343 74% 84%;   /* scarf pink #F4B6C8 */
+    --sky: 201 67% 80%;     /* sky blue #A9D6EE */
+    --lime: 43 82% 80%;     /* sunset gold #F6DFA4 */
+    --ember: 342 80% 76%;   /* coral pink, lightened from #EE7FA0 for AA contrast */
+    --matcha: 181 58% 39%;  /* turquoise water #2A9D9F */
+    --cocoa: 197 55% 20%;   /* deep ocean #173F4F */
+  }
+
+  [data-theme="neutral-pink"] {
+    --paper: 24 56% 98%;    /* #FDFAF8 */
+    --cream: 23 44% 96%;    /* linen #FAF5F2 */
+    --petal: 19 39% 89%;    /* nude #EEDFD8 */
+    --blush: 0 44% 84%;     /* dusty rose #E8C4C4 */
+    --sky: 28 20% 81%;      /* warm greige #D9CFC6 */
+    --lime: 26 49% 91%;     /* champagne #F3E6DC */
+    --ember: 356 44% 73%;   /* rose #D89A9E */
+    --matcha: 13 18% 53%;   /* mauve taupe #9C7B72 */
+    --cocoa: 6 18% 21%;     /* espresso #3F2E2C */
+  }
+
+  :root {
+    /* shadcn theme tokens, mapped to the palette */
+    --background: var(--cream);
+    --foreground: var(--cocoa);
+    --card: var(--cream);
+    --card-foreground: var(--cocoa);
+    --popover: var(--cream);
+    --popover-foreground: var(--cocoa);
+    --primary: var(--ember);
+    --primary-foreground: var(--cocoa);
+    --secondary: var(--cocoa);
+    --secondary-foreground: var(--cream);
+    --muted: var(--petal);
+    --muted-foreground: var(--cocoa);
+    --accent: var(--petal);
+    --accent-foreground: var(--cocoa);
+    --destructive: 0 72% 45%;
+    --destructive-foreground: var(--cream);
+    --border: var(--cocoa);
+    --input: var(--cocoa);
+    --ring: var(--cocoa);
+    --radius: 1.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
-html, body {
-  overflow-x: hidden; 
-  width: 100%;
-  height: 100%; 
+@layer components {
+  /* Wide, tracked caps used for every heading */
+  .display {
+    font-family: var(--font-display), sans-serif;
+    font-stretch: 125%;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+  }
+
+  /* Small tracked caps for nav links and the ribbons */
+  .caps {
+    font-family: var(--font-display), sans-serif;
+    font-stretch: 112%;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.7rem;
+  }
+
+  /* Subtle offset polka dots */
+  .dots {
+    background-color: hsl(var(--paper));
+    background-image:
+      radial-gradient(hsl(var(--blush) / 0.6) 2.5px, transparent 3px),
+      radial-gradient(hsl(var(--blush) / 0.6) 2.5px, transparent 3px);
+    background-size: 36px 36px;
+    background-position: 0 0, 18px 18px;
+  }
+
+  /* Underline that draws in from the left on hover and keyboard focus */
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1.5px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 3px;
+    transition: background-size 0.3s ease;
+  }
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 1.5px;
+  }
+
+  /* Markdown from journal posts */
+  .journal-prose {
+    line-height: 1.8;
+  }
+  .journal-prose > * + * {
+    margin-top: 1.1em;
+  }
+  .journal-prose h2,
+  .journal-prose h3 {
+    font-family: var(--font-display), sans-serif;
+    font-stretch: 112%;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 2.2em;
+  }
+  .journal-prose h2 {
+    font-size: 1rem;
+  }
+  .journal-prose h3 {
+    font-size: 0.85rem;
+  }
+  .journal-prose a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .journal-prose ul,
+  .journal-prose ol {
+    padding-left: 1.4em;
+  }
+  .journal-prose ul {
+    list-style: "✦  ";
+  }
+  .journal-prose ol {
+    list-style: decimal;
+  }
+  .journal-prose li + li {
+    margin-top: 0.4em;
+  }
+  .journal-prose blockquote {
+    border-left: 3px solid hsl(var(--blush));
+    padding-left: 1em;
+    font-style: italic;
+  }
+  .journal-prose img {
+    border-radius: 1.25rem;
+    border: 3px solid hsl(var(--cocoa));
+  }
 }
 
-#__next {
-  flex: 1; 
+/* Scrolling ribbon */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 76s linear infinite;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
 }
 
-@media (max-device-width: 768px) {
-  #hello {
-    height:80vh
+/* Circular name badge */
+.spin-slow {
+  animation: badge-spin 24s linear infinite;
+}
+@keyframes badge-spin {
+  to {
+    transform: rotate(360deg);
   }
-  .text-3xl {
-    font-size: 1.75rem; 
-  }
+}
 
-  .text-4xl {
-    font-size: 2rem; 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-
-  .text-xl {
-    font-size: 1.25rem; 
+  .marquee-track,
+  .spin-slow {
+    animation: none;
   }
-
-  .text-base {
-    font-size: 0.875rem;
+  .link-underline {
+    transition: none;
   }
-
-  .text-sm {
-    font-size: 0.85rem; 
-  }
-
-  .text-muted-foreground {
-    font-size: 0.875rem; 
-  }
-  
 }
