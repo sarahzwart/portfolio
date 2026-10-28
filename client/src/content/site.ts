@@ -114,7 +114,7 @@ export const projects: Project[] = [
     stack: "Java, Oracle, PL/SQL",
     about:
       "A simulated bank built for my database systems class, with accounts, deposits, withdrawals and transfers handled by stored procedures that keep the data consistent.",
-    link: "https://github.com/sarahzwart/cse241-project",
+    link: "https://sarah-zwart-bank-database.netlify.app",
   },
 ];
 
