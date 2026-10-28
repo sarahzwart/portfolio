@@ -129,18 +129,18 @@ export const hobbies: Hobby[] = [
   },
   {
     icon: "matcha",
-    title: "Coffee & matcha",
-    text: "I make my own matcha at home and I'm always trying new coffee and matcha shops nearby.",
+    title: "Coffee & Matcha",
+    text: "I make my own matcha at home and I'm always trying new cafes in and around my city.",
   },
   {
     icon: "dumbbell",
-    title: "Fitness & food",
-    text: "I lift weights and run, and I love finding high-protein, whole-food recipes that actually taste good.",
+    title: "Fitness & Food",
+    text: "I lift weights and run, and I love creating healthy & high protein versions of my favorite foods & desserts.",
   },
   {
     icon: "city",
     title: "Exploring the city",
-    text: "Some of my favorite days are spent exploring the city with friends.",
+    text: "Some of my favorite days are spent exploring by going on walks, thrifting, and taking photos with my digital camera.",
   },
 ];
 
