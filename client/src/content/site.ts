@@ -124,23 +124,23 @@ export type Hobby = { icon: "puzzle" | "matcha" | "dumbbell" | "city"; title: st
 export const hobbies: Hobby[] = [
   {
     icon: "puzzle",
-    title: "Puzzles",
-    text: "I play the NYT games, especially Pips, the crossword and Strands, and love a good 1,000-piece puzzle.",
+    title: "Puzzles & Games",
+    text: "I'm a fan of NYT Games, especially Pips, the crossword, and Strands, and I love working on a good 1,000-piece puzzle.",
   },
   {
     icon: "matcha",
     title: "Coffee & Matcha",
-    text: "I make my own matcha at home and I'm always trying new cafes in and around my city.",
+    text: "I love making matcha at home and discovering new coffee shops and cafes around the city.",
   },
   {
     icon: "dumbbell",
-    title: "Fitness & Food",
-    text: "I lift weights and run, and I love creating healthy & high protein versions of my favorite foods & desserts.",
+    title: "Fitness & Baking",
+    text: "I'm happiest lifting weights, going for a run, or experimenting with healthier, high-protein versions of my favorite treats.",
   },
   {
     icon: "city",
-    title: "Exploring the city",
-    text: "Some of my favorite days are spent exploring by going on walks, thrifting, and taking photos with my digital camera.",
+    title: "City Exploring",
+    text: "I love spending a day walking around the city, browsing thrift stores, and capturing little moments on my digital camera.",
   },
 ];
 
